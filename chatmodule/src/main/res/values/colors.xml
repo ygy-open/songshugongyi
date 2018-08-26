@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="address_book_title">#f08080</color>
+    <color name="btn_back">#f08080</color>
+    <color name="btn_person_add">#f08080</color>
+    <color name="btn_search">#f08080</color>
+    <color name="btn_create">#f08080</color>
+    <color name="white">#fff</color>
+    <color name="balck">#0a0a0a</color>
+    <color name="color_tab">#f9f5f5</color>
+</resources>

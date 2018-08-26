@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Design.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/color_tab</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">@color/word_color</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+<style name="TextLabel" parent="Theme.AppCompat.Light.NoActionBar">
+<!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+<item name="colorControlActivated">#FFCC00</item>
+
+</style>
+
+<style name="explode">
+    <item name="android:windowExitTransition">@transition/explode</item>
+    <item name="android:windowEnterAnimation">@transition/explode</item>
+    <item name="android:windowReenterTransition">@transition/explode</item>
+</style>
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+    </style>
+
+    <style name="leavemsg_button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/leavemsg_buttonselector</item>
+        <item name="android:textColor">@color/theme_color</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+</resources>

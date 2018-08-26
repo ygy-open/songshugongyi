@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="library-1.4.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/bb924b1a83219a7ee94ebc9eb6752dca71951d27/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/bb924b1a83219a7ee94ebc9eb6752dca71951d27/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bm.photoview/library/1.4.1/d40bc6af03344c733e2c2865f2fc26212df9be6c/library-1.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

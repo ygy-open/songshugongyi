@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data></data>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <!--Toobar-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary">
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic__back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/create_progress"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/progress_name"
+                android:textColor="@color/word_color"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/input_progress_name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_selector_rectangle"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/word_color"
+                android:textColorHint="#95A1AA"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/progress_introduction"
+                android:textColor="@color/word_color"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/input_progress_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:gravity="top"
+                android:background="@drawable/edittext_selector_rectangle"
+                android:minHeight="40dp"
+                android:textColor="@color/word_color"
+                android:textColorHint="#95A1AA"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/add_progress_images"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/button_selector_1"
+                android:stateListAnimator="@drawable/state_list_animator_z"
+                android:text="@string/upload_image"
+                android:onClick="addPicture"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_image"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/btn_unlimited"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+        <!--项目时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/progress_time"
+                android:textColor="@color/word_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/input_progress_start_time"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_selector_rectangle"
+                android:gravity="center"
+                android:hint="@string/start_time"
+                android:minHeight="40dp"
+                android:onClick="addStartTime"
+                android:singleLine="true"
+                android:textColor="@color/word_color"
+                android:textColorHint="#95A1AA"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/input_progress_end_time"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_selector_rectangle"
+                android:gravity="center"
+                android:hint="@string/end_time"
+                android:onClick="addEndTime"
+                android:minHeight="40dp"
+                android:singleLine="true"
+                android:textColor="@color/word_color"
+                android:textColorHint="#95A1AA"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/add_task"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/button_selector_1"
+                android:stateListAnimator="@drawable/state_list_animator_z"
+                android:textColor="@color/colorPrimary"
+                android:onClick="addTask"
+                android:text="@string/add_task"
+                android:textSize="15sp" />
+
+            <com.songshugongyi.songshugongyi.widget.NoScrollListView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="70dp"
+                android:id="@+id/listview_progresses_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+            </com.songshugongyi.songshugongyi.widget.NoScrollListView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+             <Button
+                 android:background="@drawable/button_selector"
+                 android:stateListAnimator="@drawable/state_list_animator_z"
+                 android:textColor="@color/white"
+                 android:text="@string/progress_save"
+               android:layout_width="wrap_content"
+                 android:layout_height="40dp"/>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:onClick="Submit"
+                android:background="@drawable/button_selector"
+                android:stateListAnimator="@drawable/state_list_animator_z"
+                android:text="@string/submit"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
+</layout>

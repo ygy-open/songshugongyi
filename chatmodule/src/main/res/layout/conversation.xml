@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/color_tab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="Back"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/conversation_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/address_book_title"
+            android:text="@string/create_group"/>
+
+        <Button
+            android:id="@+id/btn_people"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="toInfo"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_person_black"/>
+
+    </android.support.v7.widget.Toolbar>
+    <fragment
+        android:id="@+id/conversation"
+        android:name="io.rong.imkit.fragment.ConversationFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

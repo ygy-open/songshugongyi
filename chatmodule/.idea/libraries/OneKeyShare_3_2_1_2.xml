@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="OneKeyShare-3.2.1.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/f3b552f3a19dd5d9a3754e2f7095d7cf7928cc6b/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/f3b552f3a19dd5d9a3754e2f7095d7cf7928cc6b/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

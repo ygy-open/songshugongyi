@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f08080</color>
+    <color name="colorPrimaryDark">@null</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="themeColor">#5f9ea0</color>
+
+
+    <color name="menu_fragment_background">#B3000000</color>
+    <color name="menu_item_background">#171616</color>
+    <color name="divider_color">#b5b5b5</color>
+    <color name="word_color">#171616</color>
+    <color name="maingreen">#33c7b3</color>
+    <color name="color_tab">#f9f5f5</color>
+
+<color name="progress_item_introduction">#999999</color>
+
+    <color name="progress_item_name">#505050</color>
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="white_grey">#d3cdcd</color><!--白色 -->
+    <color name="ivory">#fffff0</color><!--象牙色 -->
+
+    <color name="lightyellow">#FFFFE0</color><!--亮黄色 -->
+
+    <color name="yellow">#FFFF00</color><!--黄色 -->
+
+
+</resources>

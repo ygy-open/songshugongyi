@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dl_main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:background="@color/color_tab"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                >
+
+                <Button
+                    android:id="@+id/is_show_add"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:onClick="Back"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_back"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/address_book_title"
+                    android:text="通讯录"/>
+                <Button
+                    android:id="@+id/btn_add_friend"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:onClick="addFriend"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/ic_person_add"/>
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="30dp"
+                    android:onClick="Search"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/ic_search"/>
+
+            </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_tab"
+            android:orientation="vertical"
+           >
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:layout_marginLeft="10dp"
+                android:text="群组"
+                android:gravity="left|center"
+                android:textColor="@color/balck"
+                android:layout_height="30dp" />
+
+            <ListView
+                android:layout_marginTop="5dp"
+                android:id="@+id/group_listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/color_tab"
+            android:layout_weight="8">
+
+            <Button
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:layout_marginLeft="10dp"
+                android:text="好友"
+                android:textColor="@color/balck"
+                android:gravity="left|center"
+                android:layout_height="30dp" />
+            <ListView
+                android:id="@+id/friend_listView"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+
+        </LinearLayout>
+
+</LinearLayout>
+
+</layout>

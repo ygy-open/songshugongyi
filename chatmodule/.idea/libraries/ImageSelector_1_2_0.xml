@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="ImageSelector-1.2.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/70c577261455a854bd0c567a7e5793a5aafcd90c/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/70c577261455a854bd0c567a7e5793a5aafcd90c/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.donkingliang/ImageSelector/1.2.0/486da134b4b939e504e49679c03a4dc283ffd3b9/ImageSelector-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

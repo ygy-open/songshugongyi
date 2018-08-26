@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_tab"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="100dp"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/word_color"
+            android:text="@string/task_peoples"/>
+        <TextView
+            android:id="@+id/task_peoples"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/word_color"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="100dp"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/word_color"
+            android:text="@string/task_principle"/>
+        <TextView
+            android:id="@+id/task_principle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/word_color"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/task_instroduction"
+            android:textColor="@color/word_color"
+            android:textSize="20sp" />
+
+        <TextView
+          android:id="@+id/task_instroduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/word_color"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: "com.mob.sdk"
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+
+    dexOptions {
+        jumboMode = true
+    }
+        defaultConfig {
+            applicationId "com.songshugongyi.songshugongyi"
+            minSdkVersion 17
+            targetSdkVersion 26
+            versionCode 1
+            versionName "1.0"
+            testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+            multiDexEnabled true
+        }
+    dataBinding{
+        enabled=true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven { url 'https://jitpack.io' }
+    flatDir {
+        dirs 'libs' //就是你放aar的目录地址
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+
+
+   compile 'com.github.donkingliang:ImageSelector:1.2.0'
+
+    // 分享组件
+    compile project(':sharemodule')
+    //聊天组件
+    compile project(':chatmodule')
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '26.+'//默认使用的版本
+            }
+        }
+    }
+}
+

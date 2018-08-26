@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+      android:background="@color/color_tab"
+          android:orientation="vertical">
+      <android.support.v7.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:background="@color/color_tab"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          >
+          <Button
+              android:id="@+id/is_show_add"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:onClick="Back"
+              android:layout_marginLeft="10dp"
+              android:background="@drawable/ic_back"/>
+          <TextView
+              android:id="@+id/search_title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:textSize="20sp"
+              android:textColor="@color/address_book_title"
+              android:text="@string/base_intro"/>
+      </android.support.v7.widget.Toolbar>
+
+      <LinearLayout
+          android:layout_marginTop="5dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="vertical">
+
+          <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/user_image"
+              android:layout_width="100dp"
+              android:layout_height="100dp"
+              android:layout_gravity="center"
+              android:src="@drawable/default_avatar" />
+
+      </LinearLayout>
+
+      <com.yuanopen.chatmudule.widget.userItem
+          android:id="@+id/user_name"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_marginTop="10dp">
+      </com.yuanopen.chatmudule.widget.userItem>
+
+      <com.yuanopen.chatmudule.widget.userItem
+          android:id="@+id/user_signature"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_marginTop="10dp">
+      </com.yuanopen.chatmudule.widget.userItem>
+
+      <com.yuanopen.chatmudule.widget.userItem
+          android:id="@+id/user_age"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_marginTop="5dp">
+      </com.yuanopen.chatmudule.widget.userItem>
+
+      <com.yuanopen.chatmudule.widget.userItem
+          android:id="@+id/user_sex"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_marginTop="5dp">
+      </com.yuanopen.chatmudule.widget.userItem>
+
+
+      <LinearLayout
+          android:layout_marginTop="30dp"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+          <Button
+              android:visibility="invisible"
+              android:id="@+id/btn_send_message"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:text="发消息"
+              android:onClick="toTalk"
+              android:layout_gravity="center"
+              android:textColor="@android:color/black"
+              android:background="@drawable/button_selector_attention"
+              />
+          <Button
+              android:visibility="invisible"
+              android:id="@+id/btn_add_friend"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:text="@string/dialog_add_friend"
+              android:layout_gravity="center"
+              android:onClick="AddFriend"
+              android:textColor="@android:color/black"
+              android:background="@drawable/button_selector_attention"
+              />
+      </LinearLayout>
+    </LinearLayout>
+
+</layout>
+

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ShareModule</string>
+    <string name="comment_hint">请输入内容</string>
+</resources>

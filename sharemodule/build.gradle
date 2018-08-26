@@ -1,0 +1,85 @@
+apply plugin: 'com.android.library'
+apply plugin: "com.mob.sdk"
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+//        applicationId "com.yuanopen.sharemodule"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    testCompile 'junit:junit:4.12'
+//    compile 'com.android.support:appcompat-v7:26.+'
+//    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+//
+//    //okhttp
+//    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+//    compile 'com.squareup.okio:okio:1.11.0'
+//
+//    compile 'com.google.code.gson:gson:2.8.0'
+//    compile 'junit:junit:4.12'
+
+    // Rxjava
+//    compile 'io.reactivex.rxjava2:rxjava:2.1.16'
+//    compile 'io.reactivex:rxandroid:2.1.16'
+
+    compile project(':commonmodule')
+}
+
+MobSDK {
+    appKey "d580ad56b4b5"
+    appSecret "7fcae59a62342e7e2759e9e397c82bdd"
+    SMSSDK {}
+    ShareSDK {
+
+        //平台配置信息
+        devInfo {
+            QQ {
+                sortId 0
+                appId "101480730"
+                appKey "db553945cfa9bf6de9b52c41806024ef"
+                shareByAppClient true
+            }
+            Wechat {
+                sortId 1
+                appId "wx4868b35061f87885"
+                appSecret "64020361b8ec4c99936c0e3999a9f249"
+            }
+            SinaWeibo {
+                sortId 2
+                appKey "568898243"
+                appSecret "38a4f8204cc784f81f9f0daaf31e02e3"
+                callbackUri "http://www.sharesdk.cn"
+                shareByAppClient true
+            }
+
+            Facebook {
+                sortId 3
+                appKey "1412473428822331"
+                appSecret "a42f4f3f867dc947b9ed6020c2e93558"
+                callbackUri "https://mob.com"
+            }
+        }
+    }
+}

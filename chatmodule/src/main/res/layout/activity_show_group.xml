@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/color_tab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+        <Button
+            android:id="@+id/is_show_add"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="Back"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_back"/>
+        <TextView
+            android:id="@+id/search_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/address_book_title"
+            android:text="群组基本信息"/>
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        android:id="@+id/cv"
+        app:cardBackgroundColor="@color/color_tab"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/group_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left"
+                    android:src="@drawable/default_avatar" />
+
+                <TextView
+                    android:id="@+id/tv_group_name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/balck"
+                   />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/group_signature"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/create_group_signature"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColor="@color/balck"
+                android:paddingTop="10dp"
+                android:background="@null"
+                android:paddingLeft="10dp"
+                android:maxLines="20"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+            </GridView>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/btn_join_group"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/join_group"
+        android:layout_margin="5dp"
+        android:onClick="addGroup"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:background="@drawable/button_selector_attention"
+        />
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/btn_quit_group"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/quit_group"
+        android:layout_margin="5dp"
+        android:onClick="quitGroup"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:background="@drawable/button_selector_attention"
+        />
+</LinearLayout>
+
+</layout>

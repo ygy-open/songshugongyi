@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+//        applicationId "com.yuanopen.chatmudule"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    dataBinding{
+        enabled=true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+//    compile project(':commonmodule')
+    // 融云聊天
+    compile project(':IMKit')
+
+    // 聊天要用的jar
+//    compile files('libs/AMap_2DMap_V2.9.0_20160525.jar')
+//    compile files('libs/AMap_Channel_Location_V1.4.0_20160708.jar')
+//    compile files('libs/AMap_Search_V3.4.0_20160811.jar')
+//    compile files('libs/MiPush_SDK_Client_3_5_1.jar')
+
+    compile project(':commonmodule')
+    // okhttp
+//    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+//    compile 'com.squareup.okio:okio:1.11.0'
+}

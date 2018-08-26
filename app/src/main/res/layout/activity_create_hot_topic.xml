@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_tab"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bt_shape_2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="Back"
+                android:background="@drawable/bt_shape_2"
+                android:stateListAnimator="@drawable/state_list_animator_z"
+                android:text="返回"
+                android:textColor="@color/theme_color"
+                android:textSize="17sp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:drawableLeft="@drawable/ic__back"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="bold"
+                android:gravity="center"
+                android:text="@string/title_hot_topic"
+                android:textColor="@color/theme_color"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/color_tab"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="380dp"
+            android:layout_height="320dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="3dp"
+            app:cardUseCompatPadding="true"
+            android:id="@+id/cv"
+            app:cardBackgroundColor="@color/color_tab"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_hot_topic"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/word_color"
+                    android:paddingTop="10dp"
+                    android:background="@null"
+                    android:paddingLeft="10dp"
+                    android:maxLines="20"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_image"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/btn_unlimited"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right">
+
+        <Button
+            android:id="@+id/btn_images"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_add_a_photo_black_24dp"
+            android:onClick="addPicture"
+            android:stateListAnimator="@drawable/state_list_animator_z" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/send_hot_topic"
+            style="@style/leavemsg_button_style"
+            android:layout_gravity="center_vertical"
+            android:layout_centerInParent="true"
+            android:onClick="sendToservice"
+            android:text="发表"
+            />
+    </RelativeLayout>
+</LinearLayout>
+</layout>

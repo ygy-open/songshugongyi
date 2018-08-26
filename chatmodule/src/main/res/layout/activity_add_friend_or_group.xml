@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/color_tab"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/color_tab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+
+        <Button
+            android:id="@+id/is_show_add"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="Back"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_back"/>
+        <TextView
+            android:id="@+id/search_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/address_book_title"
+            android:text="添加好友"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+
+    <!--编辑框-->
+    <EditText
+        android:id="@+id/input_content"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/edittext_selector"
+        android:hint="输入搜索内容"
+        android:minHeight="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="60dp"
+        android:singleLine="true"
+        android:textColor="@color/balck"
+        android:textColorHint="#95A1AA"
+        android:textCursorDrawable="@drawable/edittext_cursor"
+        android:layout_weight="0.72" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_search"
+            />
+
+</LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_search"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+</LinearLayout>
+
+</layout>

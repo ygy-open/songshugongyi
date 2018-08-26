@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+
+  <LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+      android:background="@color/color_tab"
+          android:orientation="vertical">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:visibility="visible"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_arrow_back"
+                    android:layout_alignBaseline="@+id/btn_save"
+                    android:layout_alignBottom="@+id/btn_save"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/fragment_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_userinfo"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_alignBaseline="@+id/btn_save"
+                    android:layout_alignBottom="@+id/btn_save"
+                    android:layout_centerHorizontal="true" />
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@null"
+                    android:text="@string/save"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_image" />
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/word_color"
+        android:text="@string/edit_avatar"/>
+</LinearLayout>
+
+      <com.songshugongyi.songshugongyi.user.userEdit
+          android:id="@+id/user_name"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_marginTop="10dp">
+      </com.songshugongyi.songshugongyi.user.userEdit>
+
+      <com.songshugongyi.songshugongyi.user.userEdit
+          android:id="@+id/user_signature"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_marginTop="10dp">
+      </com.songshugongyi.songshugongyi.user.userEdit>
+
+      <com.songshugongyi.songshugongyi.user.userEdit
+          android:id="@+id/user_age"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_marginTop="5dp">
+      </com.songshugongyi.songshugongyi.user.userEdit>
+
+      <com.songshugongyi.songshugongyi.user.userEdit
+          android:id="@+id/user_sex"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_marginTop="5dp">
+      </com.songshugongyi.songshugongyi.user.userEdit>
+
+      <com.songshugongyi.songshugongyi.user.userEdit
+          android:id="@+id/user_phone"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_marginTop="5dp">
+      </com.songshugongyi.songshugongyi.user.userEdit>
+
+
+
+      <LinearLayout
+          android:layout_marginTop="30dp"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center">
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/ic_passwrod_icon"/>
+              <Button
+                  android:id="@+id/update_password"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@null"
+                  android:textColor="@color/word_color"
+                  android:text="@string/uapte_passwrod"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center">
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/ic_login_out"/>
+              <Button
+                  android:id="@+id/login_out"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@null"
+                  android:textColor="@color/word_color"
+                  android:text="@string/login_out"/>
+          </LinearLayout>
+      </LinearLayout>
+    </LinearLayout>
+
+</layout>
+

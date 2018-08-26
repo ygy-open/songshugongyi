@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../IMKit/IMKit.iml" filepath="$PROJECT_DIR$/../IMKit/IMKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../IMLib/IMLib.iml" filepath="$PROJECT_DIR$/../IMLib/IMLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app.iml" filepath="$PROJECT_DIR$/../app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatmodule.iml" filepath="$PROJECT_DIR$/chatmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../commonmodule/commonmodule.iml" filepath="$PROJECT_DIR$/../commonmodule/commonmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sharemodule/sharemodule.iml" filepath="$PROJECT_DIR$/../sharemodule/sharemodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../songshugongyi.iml" filepath="$PROJECT_DIR$/../songshugongyi.iml" />
+    </modules>
+  </component>
+</project>

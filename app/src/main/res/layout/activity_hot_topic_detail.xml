@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_tab"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                >
+                <LinearLayout
+                    android:background="@color/color_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_avatar"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:text="行走的公益猪"
+                            android:textSize="20sp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/user_name"
+                            android:gravity="left">
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:id="@+id/create_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="昨天 21:35"
+                                android:textColor="@color/black"
+                                android:layout_weight="1"/>
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/btn_attention"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="+关注"
+                            android:layout_alignParentTop="true"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:background="@drawable/button_selector_attention"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="14dp" />
+
+                    </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_margin="10dp"
+                        android:id="@+id/tv_hot_topic_content"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/word_color"
+                        android:textSize="17sp"
+                        android:layout_height="wrap_content" />
+
+                    <com.songshugongyi.songshugongyi.widget.NoScrollGridView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/hot_topic_images"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.songshugongyi.songshugongyi.widget.NoScrollGridView>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="left"
+                            android:text="@string/wonderful_comment"
+                            android:textColor="@color/word_color"
+                            android:textSize="15sp" />
+
+                        <com.songshugongyi.songshugongyi.widget.NoScrollListView
+                            android:id="@+id/lv_hot_topic_contents"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+                        </com.songshugongyi.songshugongyi.widget.NoScrollListView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                >
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <Button
+                        android:id="@+id/hot_topic_share"
+                        android:layout_width="29dp"
+                        android:layout_height="29dp"
+                        android:background="@drawable/ic_share" />
+                    <TextView
+                        android:id="@+id/tv_share_counts"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/word_color"
+                        android:text="(100)"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/hot_topic_comment"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:background="@drawable/ic_comment" />
+
+                    <TextView
+                        android:id="@+id/tv_comment_counts"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/word_color"
+                        android:text="(100)"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/hot_topic_like"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/ic_like" />
+
+                    <TextView
+                        android:id="@+id/tv_like_counts"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/word_color"
+                        android:text="(100)"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/hot_topic_collect"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_collect"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_collect_counts"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/word_color"
+                        android:text="(100)"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

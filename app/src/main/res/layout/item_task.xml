@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_task_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="@string/task_num"
+            android:singleLine="true"
+            android:textColor="@color/word_color"
+            android:textColorHint="#95A1AA"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/tv_task_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:singleLine="true"
+            android:textColor="@color/word_color"
+            android:textColorHint="#95A1AA"
+            android:text="dfsd"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_task_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:singleLine="true"
+            android:textColor="@color/word_color"
+            android:textColorHint="#95A1AA"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>
